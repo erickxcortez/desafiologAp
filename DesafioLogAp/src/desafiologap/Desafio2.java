@@ -14,23 +14,23 @@ class Desafio2 {
     private int numero_movimentos;
     
     public Desafio2(int valor) {
-        this.calculaEImprimeMovimentos(valor);
+        this.numero_movimentos=valor;
+        this.print();
     }
 
-    public int calculaEImprimeMovimentos(int valor) {
+    public int imprimeMovimentos(int valor) {
         if (valor == 1) {
-            System.out.print(valor);
+            System.out.println(valor);
             return 1;
         } else if ((valor % 2) == 0) {
             System.out.print(valor + "->");
-
-            return 1 + calculaEImprimeMovimentos(valor / 2);
+            return( 1 + imprimeMovimentos(valor / 2));
         } else if (calculaNumeroMovimentos(valor + 1) < calculaNumeroMovimentos(valor - 1)) {
             System.out.print(valor + "->");
-            return 1 + calculaEImprimeMovimentos(valor + 1);
+            return 1 + imprimeMovimentos(valor + 1);
         } else {
             System.out.print(valor + "->");
-            return 1 + calculaEImprimeMovimentos(valor - 1);
+            return 1 + imprimeMovimentos(valor - 1);
         }
     }
 
@@ -46,4 +46,11 @@ class Desafio2 {
         }
     }
 
+    public void print(){
+        System.out.println("Desafio 2");
+        System.out.println("Valor: "+this.numero_movimentos);
+        this.imprimeMovimentos(this.numero_movimentos);
+        System.out.println("Total de movimentos = Saida = "+this.calculaNumeroMovimentos(this.numero_movimentos));
+    }
+    
 }

@@ -16,8 +16,14 @@ public class DesafioLogAp {
      */
     public static void main(String[] args) {
 
-        int valor_desafio_2 = 1329;
+        int valor_desafio_1 = 10;
+        Desafio1 desafio1 = new Desafio1(valor_desafio_1);
+        
+        int valor_desafio_2 = 1239;
         Desafio2 desafio2 = new Desafio2(valor_desafio_2);
+        
+        
+        
 
         // TODO code application logic here
     }
